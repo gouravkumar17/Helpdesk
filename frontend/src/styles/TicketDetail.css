@@ -1,0 +1,266 @@
+.ticket-detail {
+  max-width: 100%;
+}
+
+.ticket-actions {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.action-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.action-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.ticket-content {
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.ticket-main {
+  min-width: 0;
+}
+
+.ticket-sidebar {
+  min-width: 300px;
+}
+
+.ticket-description-card h3,
+.comments-section h3,
+.sla-card h3,
+.activity-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-color);
+  margin-bottom: 16px;
+}
+
+.ticket-description-card p {
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: var(--dark-color);
+}
+
+.ticket-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-item label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.meta-item span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.comments-section {
+  margin-top: 24px;
+}
+
+.comments-list {
+  space-y: 16px;
+  margin-bottom: 24px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.comment {
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: white;
+}
+
+.comment.internal {
+  background: #f0f9ff;
+  border-color: #bae6fd;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.comment-author {
+  font-weight: 600;
+  color: var(--dark-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.internal-badge {
+  background: var(--primary-color);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.comment-date {
+  font-size: 12px;
+  color: var(--secondary-color);
+}
+
+.comment-text {
+  line-height: 1.5;
+  color: var(--dark-color);
+}
+
+.no-comments {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--secondary-color);
+  font-style: italic;
+}
+
+.comment-form {
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.form-check-input {
+  width: 16px;
+  height: 16px;
+}
+
+.form-check-label {
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+
+.sla-card {
+  margin-bottom: 24px;
+}
+
+.sla-indicator {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.sla-indicator.sla-normal {
+  background: #f0fdf4;
+  border: 2px solid var(--success-color);
+}
+
+.sla-indicator.sla-warning {
+  background: #fffbeb;
+  border: 2px solid var(--warning-color);
+}
+
+.sla-indicator.sla-breached {
+  background: #fef2f2;
+  border: 2px solid var(--danger-color);
+}
+
+.sla-status {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.sla-deadline {
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+
+.activity-list {
+  space-y: 12px;
+}
+
+.activity-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: white;
+}
+
+.activity-icon {
+  font-size: 16px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-content div:first-child {
+  font-weight: 500;
+  color: var(--dark-color);
+  margin-bottom: 4px;
+}
+
+.activity-date {
+  font-size: 12px;
+  color: var(--secondary-color);
+}
+
+.error {
+  text-align: center;
+  padding: 40px;
+  color: var(--danger-color);
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .ticket-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .action-group {
+    width: 100%;
+  }
+
+  .ticket-content {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket-sidebar {
+    min-width: auto;
+  }
+}
